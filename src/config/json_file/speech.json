@@ -1,0 +1,128 @@
+{
+    "mixed_precision_training": false,
+    "txt_batch_size": 4,
+    "speech_batch_size": 4,
+    "speech_txt_batch_size": 16,
+    "iter_dataset_index": 2,
+    "max_char_len": 128,
+    "shuffle": false,
+    "num_workers": 0,
+    "lr": 0.00005,
+    "epoch": 8000,
+    "char_embedding_dim": 512,
+    "font_embedding_dim": 64,
+    "transformer_encoder": {
+        "num_layers": 2,
+        "num_heads": 8,
+        "dropout": 0.1,
+        "ffn": 1024
+    },
+    "model_eval_epoch": 5,
+    "eval_gen_data_length": 2,
+
+
+    "architectures": [
+        "Wav2Vec2ForCTC"
+      ],
+      "conv_bias": false,
+      "conv_dim": [
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        128
+      ],
+      "conv_dim_gen": [
+        128,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512
+      ],
+      "out_padding": [
+        0,1,0,0,0,0,0
+  
+      ],
+      "conv_kernel": [
+        10,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2
+      ],
+      "conv_kernel_gen": [
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          10
+        ],
+      "conv_stride": [
+        5,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      
+      "conv_stride_gen": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          5
+        ],
+      "do_stable_layer_norm": false,
+      "feat_extract_activation": "gelu",
+      "feat_extract_dropout": 0.0,
+      "feat_extract_norm": "layer",
+      "hidden_act": "gelu",
+      "hidden_dropout_prob": 0.1,
+      "hidden_size": 1024,
+      "initializer_range": 0.02,
+      "intermediate_size": 4096,
+      "layer_norm_eps": 1e-05,
+      "model_type": "wav2vec2",
+      "num_attention_heads": 16,
+      "num_conv_pos_embedding_groups": 16,
+      "num_conv_pos_embeddings": 128,
+      "num_feat_extract_layers": 7,
+      "num_hidden_layers": 24,
+      "transformers_version": "4.3.0.dev0",
+      
+      "batch_size" : 2,
+      "save_epoch" : 1,
+      "embedding_dim" : 64,
+      "num_embeddings" : 512,
+      "commitment_cost" : 0.25,
+      "decay" : 0.99,
+      "learning_rate" : 0.0001,
+  
+      "data_csv" : "dataset.csv",
+      "data_root" : "wavs",
+      "compile_speaker" : false,
+      "wav_embed_dim" : 400,
+      
+      "mean" : "raw_mean.npy",
+      "std" : "raw_std.npy",
+      "use_pretrained_transformer" : false,
+      "pretrained_transformer" : "out/model/20_vq.pth",
+      "n_heads" : 8,
+      "n_layers" : 2,
+      "dropout" : 0.5,
+      "out_dir" : "out_autoenc",
+      "model_dim" : 64
+    }
+}
