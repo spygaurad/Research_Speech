@@ -13,15 +13,15 @@ class SpeechConfig(Config):
 
     CHAR_VOCAB_FILE = Path(VOCAB_DIR)/'char.txt'
     # CHAR_VOCAB_FILE = Path("./")/'combined_char.txt'
-    FONT_VOCAB_FILE = Path(VOCAB_DIR)/'font.txt'
+    # FONT_VOCAB_FILE = Path(VOCAB_DIR)/'font.txt'
 
     # IMAGE_DIR = Path(DATA_DIR)/'image_64'
-    IMAGE_DIR = Path(DATA_DIR)/'image'
+    IMAGE_DIR = Path(DATA_DIR)/'speech'
     EXP_DIR = Path('out/handwriting')
 
-    TXT_DATASET = Path(DATASET_DIR)/'text.csv'
-    IMG_DATASET = Path(DATASET_DIR)/'image.csv'
-    IMG_TXT_DATASET = Path(DATASET_DIR)/'image_text.csv'
+    # TXT_DATASET = Path(DATASET_DIR)/'text.csv'
+    # IMG_DATASET = Path(DATASET_DIR)/'image.csv'
+    IMG_TXT_DATASET = Path(DATASET_DIR)/'speech_text.csv'
 
     TRAIN_DATASET = Path(DATASET_DIR)/'train.csv'
     EVAL_DATASET = Path(DATASET_DIR)/'eval.csv'
